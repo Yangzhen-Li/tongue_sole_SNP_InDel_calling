@@ -27,7 +27,6 @@ need_bin "${TABIX}"
 "${VCFTOOLS}" \
   --gzvcf "${INPUT_VCF}" \
   --remove-filtered-all \
-  --remove-indels \
   --min-alleles 2 \
   --max-alleles 2 \
   --minDP 5 \
