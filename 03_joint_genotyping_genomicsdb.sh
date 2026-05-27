@@ -15,8 +15,8 @@ FINAL_VCF="${OUT_DIR}/sole675_growth_all.vcf.gz"
 
 TOTAL_THREADS=196
 PARALLEL_JOBS=8
-GC_THREADS=2
-IMPORT_READER_THREADS=3
+GC_THREADS=4
+IMPORT_READER_THREADS=6
 JAVA_MEM_IMPORT="24g"
 JAVA_MEM_GENO="16g"
 
@@ -130,6 +130,7 @@ while IFS= read -r contig || [[ -n "${contig}" ]]; do
       --genomicsdb-workspace-path "${workspace}" \
       --genomicsdb-shared-posixfs-optimizations true \
       --consolidate false \
+      --batch-size 50 \
       --reader-threads "${IMPORT_READER_THREADS}" \
       -L "${contig}" \
       > "${log_file}" 2>&1
