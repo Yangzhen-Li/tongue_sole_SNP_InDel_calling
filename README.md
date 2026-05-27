@@ -1,4 +1,5 @@
 You may need to adjust, according to the sequencing depth and sequencing technology. And can be easily adapted to be used in other species. 
+
 cd /path/to/tongue_sole_variant_scripts
 chmod +x *.sh
 
